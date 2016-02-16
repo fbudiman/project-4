@@ -3,7 +3,7 @@ var router = express.Router()
 var bodyParser = require('body-parser')
 
 var usersController = require('../controllers/usersController');
-var postsController = require('../controllers/postsController');
+// var postsController = require('../controllers/postsController');
 
 
 //USERS ROUTES
@@ -15,3 +15,5 @@ router.route('/users/profile/edit/').put(usersController.editUser);
 
 
 //POSTS ROUTES
+
+module.exports = router;
