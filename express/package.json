@@ -1,0 +1,19 @@
+{
+  "name": "petsy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.3.7",
+    "morgan": "~1.6.1",
+    "path": "^0.12.7"
+  }
+}
