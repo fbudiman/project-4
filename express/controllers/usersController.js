@@ -1,5 +1,9 @@
 var User = require('../models/user');
 var mongoose = require('mongoose');
+var jwt = require('jsonwebtoken');
+var superSecret = 'ilovescotchscotchyscotchscotch';
+
+
 
 module.exports = {
 
@@ -37,5 +41,44 @@ module.exports = {
       if (err) res.json('User not deleted.');
       else res.json('User successfully deleted.')
     })
+  },
+
+  authenticateUser: function(req, res) {
+    User.findOne({email: req.body.email}).select('email password').exec(function(err, user) {
+      if (err) throw err;
+
+      // no user with that username was found
+      if (!user) {
+        res.json({
+          success: false,
+          message: 'Authentication failed. User not found.'
+        });
+      } else if (user) {
+        var validPassword = user.comparePassword(req.body.password);
+
+        if (!validPassword) {
+          res.json({
+            success: false,
+            message: 'Authentication failed. Wrong password.'
+          });
+        } else {
+
+      // if user is found and password is right
+      // create a token
+          var token = jwt.sign({
+            email: user.email
+          }, superSecret, {
+            expiresInMinutes: 1440 // expires in 24 hours
+          });
+
+      // return the information including token as JSON
+          res.json({
+            success: true,
+            message: 'Enjoy your token!',
+            token: token
+          });
+        }
+      }
+    });
   }
 }

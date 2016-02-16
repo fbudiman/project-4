@@ -5,6 +5,12 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var cors = require('cors');
 var routes = require('./config/routes');
+
+//TOKEN BASED AUTHENTICATION - WEB TOKENS
+var jwt = require('jsonwebtoken');
+var superSecret = 'ilovescotchscotchyscotchscotch';
+
+
 mongoose.connect('mongodb://localhost/petsy')
 // var path = require('path');
 
