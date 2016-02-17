@@ -28,7 +28,7 @@ function PostController($http) {
   vm.getPosts();
 
   //POST NEW POST
-  vm.newPost = function(userId, title, category, body, imageUrl, time) {
+  vm.newPost = function(title, category, body, imageUrl) {
 
     $http({
       method: 'POST',

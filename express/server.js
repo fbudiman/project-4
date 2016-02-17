@@ -17,7 +17,6 @@ mongoose.connect('mongodb://localhost/petsy')
 // var path = require('path');
 
 app.use(logger('dev'))
-// app.use(bodyParser.json())
 app.use(cors())
 
 app.use('/', routes);

@@ -65,18 +65,20 @@
 
   <div ng-controller="PostController as post">
 
-    <form ng-submit="post.newPost(post.userId, post.title, post.category, post.body, post.imageUrl, post.time)">
+  <!-- form not saving info. FIX IT -->
+
+    <form ng-submit="post.newPost(post.title, post.category, post.body, post.imageUrl)">
     <label>Title</label>
-    <input type="text" ng-model="user.title">
+    <input type="text" ng-model="post.title">
 
     <label>Category</label>
-    <input type="text" ng-model="user.category">
+    <input type="text" ng-model="post.category">
 
     <label>Body</label>
-    <input type="text" ng-model="user.body">
+    <input type="text" ng-model="post.body">
 
     <label>Image</label>
-    <input type="text" ng-model="user.imageUrl">
+    <input type="text" ng-model="post.imageUrl">
 
     <button type="submit">Create New Post</button>
 
