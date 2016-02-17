@@ -10,6 +10,7 @@
   <script src="js/app.js"></script>
   <script src="js/MainController.js"></script>
   <script src="js/UserController.js"></script>
+  <script src="js/PostController.js"></script>
 </head>
 <body>
 
@@ -55,6 +56,33 @@
     </form>
 
     <div ng-repeat="user in user.allUsers">{{user}}</div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div ng-controller="PostController as post">
+
+    <form ng-submit="post.newPost(post.userId, post.title, post.category, post.body, post.imageUrl, post.time)">
+    <label>Title</label>
+    <input type="text" ng-model="user.title">
+
+    <label>Category</label>
+    <input type="text" ng-model="user.category">
+
+    <label>Body</label>
+    <input type="text" ng-model="user.body">
+
+    <label>Image</label>
+    <input type="text" ng-model="user.imageUrl">
+
+    <button type="submit">Create New Post</button>
+
+    </form>
+
+    <div ng-repeat="post in post.allPosts">{{post}}</div>
 
   </div>
 

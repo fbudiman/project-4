@@ -10,15 +10,15 @@ function UserController($http) {
 
   vm.allUsers = [];
 
-  this.firstName = ""
-  this.lastName = ""
-  this.address = ""
-  this.email = ""
-  this.password = ""
-  this.profilePicture = ""
+  vm.firstName = ""
+  vm.lastName = ""
+  vm.address = ""
+  vm.email = ""
+  vm.password = ""
+  vm.profilePicture = ""
 
   //GRABS ALL USERS
-  this.getUsers = function () {
+  vm.getUsers = function() {
 
     $http({
       method: 'GET',
@@ -31,7 +31,7 @@ function UserController($http) {
 
 
   //POST NEW USER
-  this.newUser = function (firstName, lastName, address, email, password, profilePicture) {
+  vm.newUser = function (firstName, lastName, address, email, password, profilePicture) {
 
     $http({
       method: 'POST',
