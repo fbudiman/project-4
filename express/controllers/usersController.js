@@ -14,8 +14,15 @@ module.exports = {
       newUser[key] = req.body[key];
     });
     newUser.save(function (err){
-      if(err) console.log(err);
-      else res.send('Successfully created user.')
+      if(err) {
+        if(err.code == 11000)
+          return res.json({success: false, message: 'User already exists.'})
+        else
+          return res.send(err)
+      }
+      else {
+        res.send('Successfully created user.')
+      }
     });
   },
 
@@ -44,9 +51,10 @@ module.exports = {
   },
 
   authenticateUser: function(req, res) {
+    // was email
     User.findOne({email: req.body.email}).select('email password').exec(function(err, user) {
       if (err) throw err;
-
+      console.log(user)
       // no user with that username was found
       if (!user) {
         res.json({

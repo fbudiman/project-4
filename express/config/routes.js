@@ -1,6 +1,8 @@
 var express = require('express')
-var router = express.Router()
-var bodyParser = require('body-parser')
+var router = new express.Router()
+var jwt = require('jsonwebtoken');
+var superSecret = 'ilovescotchscotchyscotchscotch';
+
 
 var usersController = require('../controllers/usersController');
 var postsController = require('../controllers/postsController');
