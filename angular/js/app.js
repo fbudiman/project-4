@@ -1,4 +1,4 @@
-angular.module('Petsy', ['ui.router'])
+angular.module('Petsy', ['ui.router', 'authService']) //'authService' - include in dependencies
  .config(MainRouter)
 
 //SET UP FOR ANGULAR UI VIEWS
@@ -22,6 +22,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     })
     .state('login', {
       url: '/login',
+      controller : 'MainController',
+      controllerAs: 'login',
       templateUrl: 'login.html'
     })
     .state('register', {

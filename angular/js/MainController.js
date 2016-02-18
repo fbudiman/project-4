@@ -26,7 +26,7 @@ angular.module('Petsy')
         .success(function(data) {
 
           //IF USER SUCCESSFULLY LOGS IN, REDIRECT TO USERS PAGE
-          $location.path('/users')
+          $location.path('/api/users')
         })
     }
 
