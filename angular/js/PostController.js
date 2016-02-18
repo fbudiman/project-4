@@ -4,6 +4,8 @@ angular.module('Petsy')
 function PostController($http, Post) {
 
   var vm = this
+
+  //show all posts
   Post.all().success(function (data){
     vm.allPosts = data;
   })
