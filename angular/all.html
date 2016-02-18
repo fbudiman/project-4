@@ -17,8 +17,14 @@
 
 
     <div id="bottom-bar-wrap">
+      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="all">All</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="lost">Lost</a></div>
-      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="info">Information</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></div>
+    </div>
+
+    <div ng-controller="PostController as post">
+
+    <div ng-repeat="post in post.allPosts">{{post.title}}: {{post.body}} ({{post.category}})</div>
+
     </div>

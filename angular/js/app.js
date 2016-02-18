@@ -36,9 +36,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/lost',
       templateUrl: 'lost.html'
     })
-    .state('info', {
-      url: '/info',
-      templateUrl: 'info.html'
+    .state('all', {
+      url: '/all',
+      templateUrl: 'all.html'
     })
     .state('misc', {
       url: '/misc',
