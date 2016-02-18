@@ -1,7 +1,7 @@
-  <div id="top-bar">
-    Petsy
-    <img src="images/logo.png">
-  </div>
+<div id="top-bar">
+  Petsy
+  <img src="images/logo.png">
+</div>
 
 <div id="bottom-bar-wrap">
   <div class="bottom-bar"><a ui-sref-active="active" ui-sref="newsfeed">Newsfeed</a></div>
@@ -16,35 +16,9 @@
   <br>
 
 
-  <div ng-controller="PostController as post">
-
-
-
-    <form ng-submit="post.newPost(post.title, post.category, post.body, post.imageUrl)">
-      <label>Title</label>
-      <input type="text" ng-model="post.title">
-
-      <label>Category</label>
-      <input type="text" ng-model="post.category">
-
-      <label>Body</label>
-      <input type="text" ng-model="post.body">
-
-      <label>Image</label>
-      <input type="text" ng-model="post.imageUrl">
-
-      <button type="submit">Create New Post</button>
-
-    </form>
-
     <div id="bottom-bar-wrap">
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="lost">Lost</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="info">Information</a></div>
       <div class="bottom-bar"><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></div>
     </div>
-
-
-    <div ng-repeat="post in post.allPosts">{{post.title}}: {{post.body}}</div>
-
-  </div>

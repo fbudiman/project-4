@@ -28,7 +28,22 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/register',
       templateUrl: 'register.html'
     })
-
+    .state('adoptions', {
+      url: '/adoptions',
+      templateUrl: 'adoptions.html'
+    })
+    .state('lost', {
+      url: '/lost',
+      templateUrl: 'lost.html'
+    })
+    .state('info', {
+      url: '/info',
+      templateUrl: 'info.html'
+    })
+    .state('misc', {
+      url: '/misc',
+      templateUrl: 'misc.html'
+    })
 
     $urlRouterProvider.otherwise('/')
 }
