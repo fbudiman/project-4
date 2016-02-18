@@ -70,7 +70,7 @@ angular.module('authService', [])
 
   })
 
-  .factory('AuthInterceptor', function($q, AuthToken) {
+  .factory('AuthInterceptor', function($q, AuthToken, $location) {
 
     var interceptorFactory = {};
 

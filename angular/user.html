@@ -17,31 +17,6 @@
 
   <div class="main-header" ng-controller="UserController as user">
 
-  <h1>Register</h1>
-
-    <form ng-submit="user.newUser()">
-      <label>First Name</label>
-      <input type="text" ng-model="user.userData.firstName">
-
-      <label>Last Name</label>
-      <input type="text" ng-model="user.userData.lastName">
-
-      <label>Address</label>
-      <input type="text" ng-model="user.userData.address">
-
-      <label>Email</label>
-      <input type="email" ng-model="user.userData.email">
-
-      <label>Password</label>
-      <input type="password" ng-model="user.userData.password">
-
-      <label>Profile Picture</label>
-      <input type="text" ng-model="user.userData.profilePicture">
-
-      <button type="submit">Create New User</button>
-
-    </form>
-
     <div ng-repeat="user in user.allUsers">{{user.firstName}} {{user.lastName}} - {{user.email}} ({{user.address}})</div>
 
   </div>
