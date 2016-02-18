@@ -47,6 +47,10 @@ var postsController = require('../controllers/postsController');
 //     // next() used to be here
 // });
 
+router.get('/me', function(req, res) {
+  res.send(req.decoded);
+});
+
 //USERS ROUTES
 router.route('/api/user/create').post(usersController.createUser);
 router.route('/user/:id/delete').delete(usersController.deleteUser);
