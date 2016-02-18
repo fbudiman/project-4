@@ -7,19 +7,19 @@ angular.module('postService', [])
     // postFactory.get = function(id) {
     //   return $http.get('http://localhost:3000/api/' + id + );
     // };
-    // get all users
+    // get all posts
     postFactory.all = function() {
       return $http.get('http://localhost:3000/api/posts/');
     };
-    // create a user
+    // create a post
     postFactory.create = function(postData) {
       return $http.post('http://localhost:3000/api/post/create', postData);
     };
-    // update a user
+    // update a post
     postFactory.update = function(id, postData) {
       return $http.put('http://localhost:3000/post/' + id + '/edit', postData);
     };
-    // delete a user
+    // delete a post
     postFactory.delete = function(id) {
       return $http.delete('http://localhost:3000/post' + id + '/delete');
     };

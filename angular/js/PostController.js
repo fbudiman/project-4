@@ -1,8 +1,6 @@
 angular.module('Petsy')
   .controller('PostController', PostController)
 
-// PostController.$inject = ['$http', 'Post'];
-
 function PostController($http, Post) {
 
   var vm = this

@@ -1,4 +1,4 @@
-angular.module('Petsy', ['ui.router', 'authService', 'postService'])
+angular.module('Petsy', ['ui.router', 'authService', 'postService', 'userService'])
  .config(MainRouter)
  .config(function($httpProvider) {
 
