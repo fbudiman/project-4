@@ -24,9 +24,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/login',
       templateUrl: 'login.html'
     })
-    .state('6', {
-      url: '/6',
-      templateUrl: '6.html'
+    .state('register', {
+      url: '/register',
+      templateUrl: 'register.html'
     })
 
 
