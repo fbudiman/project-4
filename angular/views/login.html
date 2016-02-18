@@ -9,7 +9,8 @@
     <a ui-sref-active="active" ui-sref="search"><div class="bottom-bar"></div></a><span class="link-name">Search</span>
     <a ui-sref-active="active" ui-sref="about"><div class="bottom-bar"></div></a><span class="link-name">About</span>
     <a ui-sref-active="active" ui-sref="user"><div class="bottom-bar"></div></a><span class="link-name">User</span>
-    <a ui-sref-active="active" ui-sref="login"><div class="bottom-bar"></div></a><span class="link-name">Login</span>
+    <a ui-sref-active="active" ui-sref="login" ng-if="!main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="!main.loggedIn">Login</span>
+    <a href="#" ng-if="main.loggedIn"><div class="bottom-bar" ng-click="main.doLogout()"></div></a><span class="link-name" ng-if="main.loggedIn">Logout</span>
     <a ui-sref-active="active" ui-sref="register"><div class="bottom-bar"></div></a><span class="link-name">Register</span>
   </div>
 
@@ -18,7 +19,7 @@
   <br>
 
 
-  <form ng-submit="login.doLogin()">
+  <form ng-submit="main.doLogin()">
     <div class="row">
       <div class="col-xs-3"></div>
         <div class="col-xs-6">
@@ -30,12 +31,12 @@
               <!-- EMAIL INPUT -->
               <div class="form-group align">
                 <label>Email:</label>
-                <input type="email" class="form-control" ng-model="login.loginData.email">
+                <input type="email" class="form-control" ng-model="main.loginData.email">
               </div>
               <!-- PASSWORD INPUT -->
               <div class="form-group">
                 <label>Password:</label>
-                <input type="password" class="form-control" ng-model="login.loginData.password">
+                <input type="password" class="form-control" ng-model="main.loginData.password">
               </div>
               <!-- LOGIN BUTTON -->
               <button class="btn login-button" type="submit">
@@ -48,5 +49,5 @@
     </div>
   </form>
 
-  <button class="btn btn-default" ng-click="login.doLogout()">Logout</button>
+  <button class="btn btn-default" ng-click="main.doLogout()">Logout</button>
 </div>
