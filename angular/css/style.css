@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
 body {
-  background-color: #F9F1B5; ;
+  background-color: #F9F1B5;
+  margin: 0px;
+  padding: 0px;
 }
 
 #top-bar {
@@ -47,6 +49,13 @@ img {
 
 #bottom-bar-wrap {
   text-align: center;
-  word-spacing: 75px;
+  word-spacing: 60px;
 }
 
+.login-button, .panel-color {
+  background-color: #A6D8DE;
+}
+
+.panel {
+  border: 1px solid #A6D8DE;
+}

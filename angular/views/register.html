@@ -1,47 +1,49 @@
-<div id="top-bar">
-  Petsy
-  <img src="images/logo.png">
-</div>
+<div class="container">
+  <div id="top-bar">
+    Petsy
+    <img src="images/logo.png">
+  </div>
 
-<div id="bottom-bar-wrap">
-  <a ui-sref-active="active" ui-sref="newsfeed"><div class="bottom-bar"></div></a><span class="link-name">Newsfeed</span>
-  <a ui-sref-active="active" ui-sref="search"><div class="bottom-bar"></div></a><span class="link-name">Search</span>
-  <a ui-sref-active="active" ui-sref="about"><div class="bottom-bar"></div></a><span class="link-name">About</span>
-  <a ui-sref-active="active" ui-sref="user"><div class="bottom-bar"></div></a><span class="link-name">User</span>
-  <a ui-sref-active="active" ui-sref="login"><div class="bottom-bar"></div></a><span class="link-name">Login</span>
-  <a ui-sref-active="active" ui-sref="register"><div class="bottom-bar"></div></a><span class="link-name">Register</span>
-</div>
+  <div id="bottom-bar-wrap">
+    <a ui-sref-active="active" ui-sref="newsfeed"><div class="bottom-bar"></div></a><span class="link-name">Newsfeed</span>
+    <a ui-sref-active="active" ui-sref="search"><div class="bottom-bar"></div></a><span class="link-name">Search</span>
+    <a ui-sref-active="active" ui-sref="about"><div class="bottom-bar"></div></a><span class="link-name">About</span>
+    <a ui-sref-active="active" ui-sref="user"><div class="bottom-bar"></div></a><span class="link-name">User</span>
+    <a ui-sref-active="active" ui-sref="login"><div class="bottom-bar"></div></a><span class="link-name">Login</span>
+    <a ui-sref-active="active" ui-sref="register"><div class="bottom-bar"></div></a><span class="link-name">Register</span>
+  </div>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<div class="main-header" ng-controller="UserController as user">
+  <div class="main-header" ng-controller="UserController as user">
 
-<!-- CAN ONLY REGISTER WHILE LOGGED IN.....??? FIX -->
+  <!-- CAN ONLY REGISTER WHILE LOGGED IN.....??? FIX -->
 
-<h1>Register</h1>
+  <h1>Register</h1>
 
-    <form ng-submit="user.newUser()">
-      <label>First Name</label>
-      <input type="text" ng-model="user.userData.firstName">
+      <form ng-submit="user.newUser()">
+        <label>First Name</label>
+        <input type="text" ng-model="user.userData.firstName">
 
-      <label>Last Name</label>
-      <input type="text" ng-model="user.userData.lastName">
+        <label>Last Name</label>
+        <input type="text" ng-model="user.userData.lastName">
 
-      <label>Address</label>
-      <input type="text" ng-model="user.userData.address">
+        <label>Address</label>
+        <input type="text" ng-model="user.userData.address">
 
-      <label>Email</label>
-      <input type="email" ng-model="user.userData.email">
+        <label>Email</label>
+        <input type="email" ng-model="user.userData.email">
 
-      <label>Password</label>
-      <input type="password" ng-model="user.userData.password">
+        <label>Password</label>
+        <input type="password" ng-model="user.userData.password">
 
-      <label>Profile Picture</label>
-      <input type="text" ng-model="user.userData.profilePicture">
+        <label>Profile Picture</label>
+        <input type="text" ng-model="user.userData.profilePicture">
 
-      <button type="submit">Create New User</button>
+        <button type="submit">Create New User</button>
 
-    </form>
+      </form>
 
+  </div>
 </div>
