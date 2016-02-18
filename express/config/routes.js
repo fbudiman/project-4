@@ -7,9 +7,7 @@ var superSecret = 'ilovescotchscotchyscotchscotch';
 var usersController = require('../controllers/usersController');
 var postsController = require('../controllers/postsController');
 
-
-//AUTHENTICATION ROUTES
-// router.route('/authenticate').post(usersController.authenticateUser);
+router.route('/authenticate').post(usersController.authenticateUser);
 
 // router.use(function(req, res, next) {
 

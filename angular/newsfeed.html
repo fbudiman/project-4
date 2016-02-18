@@ -20,18 +20,18 @@
 
 
 
-    <form ng-submit="post.newPost(post.title, post.category, post.body, post.imageUrl)">
+    <form ng-submit="post.newPost()">
       <label>Title</label>
-      <input type="text" ng-model="post.title">
+      <input type="text" ng-model="post.postData.title">
 
       <label>Category</label>
-      <input type="text" ng-model="post.category">
+      <input type="text" ng-model="post.postData.category">
 
       <label>Body</label>
-      <input type="text" ng-model="post.body">
+      <input type="text" ng-model="post.postData.body">
 
       <label>Image</label>
-      <input type="text" ng-model="post.imageUrl">
+      <input type="text" ng-model="post.postData.imageUrl">
 
       <button type="submit">Create New Post</button>
 

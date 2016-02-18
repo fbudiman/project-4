@@ -1,4 +1,4 @@
-angular.module('Petsy', ['ui.router', 'authService']) //'authService' - include in dependencies
+angular.module('Petsy', ['ui.router', 'authService', 'postService'])
  .config(MainRouter)
 
 //SET UP FOR ANGULAR UI VIEWS
@@ -30,6 +30,10 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/register',
       templateUrl: 'register.html'
     })
+    .state('all', {
+      url: '/all',
+      templateUrl: 'all.html'
+    })
     .state('adoptions', {
       url: '/adoptions',
       templateUrl: 'adoptions.html'
@@ -37,10 +41,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     .state('lost', {
       url: '/lost',
       templateUrl: 'lost.html'
-    })
-    .state('all', {
-      url: '/all',
-      templateUrl: 'all.html'
     })
     .state('misc', {
       url: '/misc',

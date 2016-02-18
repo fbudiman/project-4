@@ -54,7 +54,6 @@ module.exports = {
     // was email
     User.findOne({email: req.body.email}).select('email password').exec(function(err, user) {
       if (err) throw err;
-      console.log(user)
       // no user with that username was found
       if (!user) {
         res.json({

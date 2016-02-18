@@ -7,16 +7,17 @@ angular.module('authService', [])
     // log a user in
     authFactory.login = function(email, password) {
 
-    // return the promise object and its data
-    return $http.post('/authenticate', {
-      email: email,
-      password: password
-    })
-    .success(function(data) {
-      AuthToken.setToken(data.token);
-      return data;
-    });
-  };
+      // return the promise object and its data
+      return $http.post('http://localhost:3000/authenticate', {
+        email: email,
+        password: password
+      })
+      .success(function(data) {
+        AuthToken.setToken(data.token);
+        console.log(data)
+        return data;
+      });
+    };
 
     // log a user out by clearing the token
     authFactory.logout = function() {
