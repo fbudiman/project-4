@@ -1,5 +1,11 @@
 angular.module('Petsy', ['ui.router', 'authService', 'postService'])
  .config(MainRouter)
+ .config(function($httpProvider) {
+
+ // attach our auth interceptor to the http requests
+ $httpProvider.interceptors.push('AuthInterceptor');
+
+ });
 
 //SET UP FOR ANGULAR UI VIEWS
 function MainRouter($stateProvider, $urlRouterProvider) {

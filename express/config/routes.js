@@ -9,41 +9,41 @@ var postsController = require('../controllers/postsController');
 
 router.route('/authenticate').post(usersController.authenticateUser);
 
-// router.use(function(req, res, next) {
+router.use(function(req, res, next) {
 
-//   // check header or url parameters or post parameters for token
-//   var token = req.body.token || req.query.token || req.headers['x-access-token'];
-//     // decode token
-//     if (token) {
+  // check header or url parameters or post parameters for token
+  var token = req.body.token || req.query.token || req.headers['x-access-token'];
+    // decode token
+    if (token) {
 
-//       // verifies secret and checks exp
-//       jwt.verify(token, superSecret, function(err, decoded) {
-//         if (err) {
-//           return res.status(403).send({
-//             success: false,
-//             message: 'Failed to authenticate token.'
-//           });
-//         } else {
-//         // if everything is good, save to request for use in other routes
-//           req.decoded = decoded;
+      // verifies secret and checks exp
+      jwt.verify(token, superSecret, function(err, decoded) {
+        if (err) {
+          return res.status(403).send({
+            success: false,
+            message: 'Failed to authenticate token.'
+          });
+        } else {
+        // if everything is good, save to request for use in other routes
+          req.decoded = decoded;
 
-//           next();
+          next();
 
-//         }
-//       });
+        }
+      });
 
-//     } else {
+    } else {
 
-//       // if there is no token
-//       // return an HTTP response of 403 (access forbidden) and an error message
-//       return res.status(403).send({
-//         success: false,
-//         message: 'No token provided.'
-//       });
+      // if there is no token
+      // return an HTTP response of 403 (access forbidden) and an error message
+      return res.status(403).send({
+        success: false,
+        message: 'No token provided.'
+      });
 
-//     }
-//     // next() used to be here
-// });
+    }
+    // next() used to be here
+});
 
 router.get('/me', function(req, res) {
   res.send(req.decoded);
