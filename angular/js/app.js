@@ -12,45 +12,45 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('newsfeed', {
       url: '/',
-      templateUrl: 'newsfeed.html'
+      templateUrl: 'views/newsfeed.html'
     })
     .state('search', {
       url: '/search',
-      templateUrl: 'search.html'
+      templateUrl: 'views/search.html'
     })
     .state('about', {
       url: '/about',
-      templateUrl: 'about.html'
+      templateUrl: 'views/about.html'
     })
     .state('user', {
       url: '/user',
-      templateUrl: 'user.html'
+      templateUrl: 'views/user.html'
     })
     .state('login', {
       url: '/login',
       controller : 'MainController',
       controllerAs: 'login',
-      templateUrl: 'login.html'
+      templateUrl: 'views/login.html'
     })
     .state('register', {
       url: '/register',
-      templateUrl: 'register.html'
+      templateUrl: 'views/register.html'
     })
     .state('all', {
       url: '/all',
-      templateUrl: 'all.html'
+      templateUrl: 'views/all.html'
     })
     .state('adoptions', {
       url: '/adoptions',
-      templateUrl: 'adoptions.html'
+      templateUrl: 'views/adoptions.html'
     })
     .state('lost', {
       url: '/lost',
-      templateUrl: 'lost.html'
+      templateUrl: 'views/lost.html'
     })
     .state('misc', {
       url: '/misc',
-      templateUrl: 'misc.html'
+      templateUrl: 'views/misc.html'
     })
 
     $urlRouterProvider.otherwise('/')
