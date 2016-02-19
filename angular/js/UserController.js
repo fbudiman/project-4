@@ -19,6 +19,8 @@ function UserController($http, User) {
 
     // clear the form
     vm.userData = {};
+    //message
+    vm.message = "User successfully created."
     //post to the page as soon as created
     User.all().success(function (data){
       vm.allUsers = data;
