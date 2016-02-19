@@ -16,15 +16,15 @@ function PostController($http, Post) {
 
     // use the create function in the userService
     Post.create(vm.postData)
-    .success(function(data) {
-    vm.processing = false;
+      .success(function(data) {
+        vm.processing = false;
 
-    // clear the form
-    vm.postData = {};
-    //post to the page as soon as created
-    Post.all().success(function (data){
-      vm.allPosts = data;
-    })
+        // clear the form
+        vm.postData = {};
+        //post to the page as soon as created
+        Post.all().success(function (data){
+          vm.allPosts = data;
+      })
     });
 
   };

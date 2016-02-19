@@ -11,7 +11,6 @@ angular.module('Petsy')
       Auth.getUser()
         .success(function(data) {
           vm.user = data;
-          vm.post.postData.userId = vm.user.id
         })
     }
 
