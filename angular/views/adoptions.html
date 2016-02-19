@@ -111,7 +111,7 @@
       <div ng-repeat="post in post.allPosts | orderBy: 'createdAt':true">
         <div ng-if="post.category=='adoption'">
           <div class="panel">
-            <div class="panel-heading panel-color"><span style="font-size: 14pt">{{post.title}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 9pt">{{post.createdAt | date: 'medium'}}</span></div>
+            <div class="panel-heading panel-color"><span style="font-size: 14pt">{{post.title}}</span>&nbsp;&nbsp;<span ng-if="post.location">({{post.location}})</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{post.createdAt | date: 'medium'}}</span></div>
               <br>
             <div class="panel-body">
 
