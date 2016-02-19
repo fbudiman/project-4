@@ -21,6 +21,9 @@ function PostController($http, Post) {
 
         // clear the form
         vm.postData = {};
+
+        //message
+        vm.message = "Post successfully created."
         //post to the page as soon as created
         Post.all().success(function (data){
           vm.allPosts = data;
