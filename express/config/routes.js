@@ -26,7 +26,7 @@ router.use(function(req, res, next) {
         } else {
         // if everything is good, save to request for use in other routes
           req.decoded = decoded;
-
+          console.log(req.decoded)
           next();
 
         }
@@ -42,7 +42,6 @@ router.use(function(req, res, next) {
       });
 
     }
-    // next() used to be here
 });
 
 router.get('/me', function(req, res) {

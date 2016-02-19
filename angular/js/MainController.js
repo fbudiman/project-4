@@ -7,6 +7,14 @@ angular.module('Petsy')
     //GET INFO IF A PERSON IS LOGGED IN
     vm.loggedIn = Auth.isLoggedIn();
 
+    if (vm.loggedIn) {
+      Auth.getUser()
+        .success(function(data) {
+          vm.user = data;
+          vm.post.postData.userId = vm.user.id
+        })
+    }
+
     //CHECK TO SEE IF A USER IS LOGGED IN ON EVERY REQUEST
     //ROOTSCOPE - checking to see if a user is still logged in/login status after going to a different page
     $rootScope.$on('$routeChangeStart', function() {
