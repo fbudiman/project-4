@@ -98,7 +98,15 @@
     <div class="col-sm-2"></div>
   </div>
 
-      <div ng-repeat="post in post.allPosts">{{post.title}}: {{post.body}} ({{post.category}})</div>
+  <div class="row">
+    <div class="col-sm-2"></div>
 
-      </div>
+    <div class="col-sm-8 background-tab">
+      <div ng-repeat="post in post.allPosts">{{post.title}}: {{post.body}} ({{post.category}})</div>
+    </div>
+
+    <div class="col-sm-2"></div>
+  </div>
+
+  </div>
 </div>

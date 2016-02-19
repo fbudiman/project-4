@@ -19,6 +19,9 @@
 
     <div class="main-header" ng-controller="UserController as user">
 
+      USER: {{main.user.firstName}}, USER ID: {{main.user.id}}
+
+
       <div ng-repeat="user in user.allUsers">{{user.firstName}} {{user.lastName}} - {{user.email}} ({{user.address}})</div>
 
     </div>
