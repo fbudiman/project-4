@@ -113,11 +113,14 @@
         <div ng-if="post.category=='misc'">
 
           <div class="panel">
-            <div class="panel-heading panel-color"><span style="font-size: 14pt">{{post.title}}</span></div>
+            <div class="panel-heading panel-color"><span style="font-size: 14pt">{{post.title}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 9pt">{{post.createdAt | date: 'medium'}}</span></div>
             <br>
             <div class="panel-body">
 
             {{post.body}}
+            <br>
+            <br>
+            <img ng-if="post.imageUrl" src="{{post.imageUrl}}" class="post-images">
 
             </div>
           </div>
