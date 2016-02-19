@@ -18,13 +18,16 @@
   <br>
 
 
+  USER: {{main.user.firstName}}, USER ID: {{main.user.id}}
 
   <div ng-controller="PostController as post">
 
-  USER: {{main.user.firstName}}, USER ID: {{main.user.id}}
-
-
     <form ng-submit="post.newPost()">
+
+      <label for="userId">New Post:</label>
+      <select name="userId" ng-model="post.postData.userId">
+        <option value="{{main.user.id}}">Yes</option>
+      </select>
 
       <label>Title</label>
       <input type="text" ng-model="post.postData.title">
@@ -34,7 +37,7 @@
         <option value="adoption">Adoption</option>
         <option value="lostPet">Lost Pet</option>
         <option value="misc">Miscellaneous</option>
-      </select><br>
+      </select>
 
       <label>Body</label>
       <input type="text" ng-model="post.postData.body">
@@ -46,12 +49,15 @@
 
     </form>
 
-    <div id="bottom-bar-wrap">
-      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="all">All</a></div>
-      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></div>
-      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="lost">Lost</a></div>
-      <div class="bottom-bar"><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></div>
-    </div>
+  <br>
+  <br>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a ui-sref-active="active" ui-sref="all">All</a></li>
+    <li><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></li>
+    <li><a ui-sref-active="active" ui-sref="lost">Lost</a></li>
+    <li><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></li>
+  </ul>
 
 
 

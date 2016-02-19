@@ -17,10 +17,43 @@
     <br>
     <br>
 
-      <div id="bottom-bar-wrap">
-        <div class="bottom-bar"><a ui-sref-active="active" ui-sref="all">All</a></div>
-        <div class="bottom-bar"><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></div>
-        <div class="bottom-bar"><a ui-sref-active="active" ui-sref="lost">Lost</a></div>
-        <div class="bottom-bar"><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></div>
-      </div>
+      <div ng-controller="PostController as post">
+
+    <form ng-submit="post.newPost()">
+
+      <label for="userId">New Post:</label>
+      <select name="userId" ng-model="post.postData.userId">
+        <option value="{{main.user.id}}">Yes</option>
+      </select>
+
+      <label>Title</label>
+      <input type="text" ng-model="post.postData.title">
+
+      <label for="category">Category:</label>
+      <select name="category" ng-model="post.postData.category">
+        <option value="adoption">Adoption</option>
+        <option value="lostPet">Lost Pet</option>
+        <option value="misc">Miscellaneous</option>
+      </select>
+
+      <label>Body</label>
+      <input type="text" ng-model="post.postData.body">
+
+      <label>Image</label>
+      <input type="text" ng-model="post.postData.imageUrl">
+
+      <button type="submit">Create New Post</button>
+
+    </form>
+
+  <br>
+  <br>
+
+  <ul class="nav nav-tabs">
+    <li><a ui-sref-active="active" ui-sref="all">All</a></li>
+    <li><a ui-sref-active="active" ui-sref="adoptions">Adoptions</a></li>
+    <li class="active"><a ui-sref-active="active" ui-sref="lost">Lost</a></li>
+    <li><a ui-sref-active="active" ui-sref="misc">Miscellaneous</a></li>
+  </ul>
+</div>
 </div>
