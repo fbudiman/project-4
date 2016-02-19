@@ -70,3 +70,8 @@ img {
   height: auto;
   border: 1px solid black;
 }
+
+.profile {
+  width: 200px;
+  height: auto;
+}

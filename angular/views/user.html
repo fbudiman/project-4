@@ -16,13 +16,37 @@
 
   <br>
   <br>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+      <div class="panel">
+            <div class="panel-heading panel-color"><span style="font-size: 18pt">User Info</span></div>
+            <br>
+            <div class="panel-body">
+
+              <img ng-if="main.user.profilePicture" search="{{main.user.profilePicture}}" class="profile">
+
+              Name: {{main.user.firstName}} {{main.user.lastName}}
+              <br>
+              Address: {{main.user.address}}
+              <br>
+              Email: {{main.user.email}}
+
+            </div>
+          </div>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+  </div>
+
 
     <div class="main-header" ng-controller="UserController as user">
 
-      USER: {{main.user.firstName}}, USER ID: {{main.user.id}}
-
-
-      <div ng-repeat="user in user.allUsers">{{user.firstName}} {{user.lastName}} - {{user.email}} ({{user.address}})</div>
+<!--       <div ng-repeat="user in user.allUsers">{{user.firstName}} {{user.lastName}} - {{user.email}} ({{user.address}})</div> -->
 
     </div>
 </div>

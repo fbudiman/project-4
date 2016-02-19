@@ -51,7 +51,7 @@ module.exports = {
   },
 
   authenticateUser: function(req, res) {
-    User.findOne({email: req.body.email}).select('_id firstName email password').exec(function(err, user) {
+    User.findOne({email: req.body.email}).select('_id firstName lastName address profilePicture email password').exec(function(err, user) {
       if (err) throw err;
       // no user with that username was found
       if (!user) {
@@ -74,6 +74,9 @@ module.exports = {
           var token = jwt.sign({
             id: user._id,
             firstName: user.firstName,
+            lastName: user.lastName,
+            address: user.address,
+            profilePicture: user.profilePicture,
             email: user.email
           }, superSecret, {
             expiresInMinutes: 1440 // expires in 24 hours
