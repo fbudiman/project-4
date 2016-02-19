@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
 body {
-  background-color: #F9F1B5;
+  background-image: url('../images/background.jpeg');
   margin: 0px;
   padding: 0px;
 }
@@ -60,7 +60,7 @@ img {
 
 .background-tab {
   background-color: white;
-  padding: 30px;
+  padding: 45px;
   margin-right: 15px;
   margin-left: 15px;
 }

@@ -97,5 +97,29 @@
 
     <div class="col-sm-2"></div>
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8 background-tab">
+      <div ng-repeat="post in post.allPosts">
+        <div ng-if="post.category=='misc'">
+
+          <div class="panel">
+            <div class="panel-heading panel-color"><span style="font-size: 14pt">{{post.title}}</span></div>
+            <br>
+            <div class="panel-body">
+
+            {{post.body}}
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2"></div>
+  </div>
+
 </div>
