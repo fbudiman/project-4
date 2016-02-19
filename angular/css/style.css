@@ -64,3 +64,9 @@ img {
   margin-right: 15px;
   margin-left: 15px;
 }
+
+.post-images {
+  width: 350px;
+  height: auto;
+  border: 1px solid black;
+}

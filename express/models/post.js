@@ -8,6 +8,7 @@ var postsSchema = new Schema({
   body: String,
   imageUrl: String,
   location: String,
+  createdAt: { type: Date, default: Date.now },
   comments: [{ body: String, date: Date }]
 })
 
