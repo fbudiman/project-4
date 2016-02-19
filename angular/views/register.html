@@ -21,30 +21,48 @@
 
   <!-- CAN ONLY REGISTER WHILE LOGGED IN.....??? FIX -->
 
-  <h1>Register</h1>
+    <div class="row">
+      <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+          <div class="panel">
+            <div class="panel-heading panel-color"><span style="font-size: 18pt">Register</span></div>
+            <br>
+            <div class="panel-body">
 
-      <form ng-submit="user.newUser()">
-        <label>First Name</label>
-        <input type="text" ng-model="user.userData.firstName">
+            <form ng-submit="user.newUser()">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" ng-model="user.userData.firstName">
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" ng-model="user.userData.lastName">
+              </div>
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" class="form-control" ng-model="user.userData.address">
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" ng-model="user.userData.email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" ng-model="user.userData.password">
+              </div>
+              <div class="form-group">
+                <label>Profile Picture</label>
+                <input type="text" class="form-control" ng-model="user.userData.profilePicture">
+              </div>
+                <button type="submit" class="btn login-button">Create New User</button>
 
-        <label>Last Name</label>
-        <input type="text" ng-model="user.userData.lastName">
+            </form>
 
-        <label>Address</label>
-        <input type="text" ng-model="user.userData.address">
-
-        <label>Email</label>
-        <input type="email" ng-model="user.userData.email">
-
-        <label>Password</label>
-        <input type="password" ng-model="user.userData.password">
-
-        <label>Profile Picture</label>
-        <input type="text" ng-model="user.userData.profilePicture">
-
-        <button type="submit">Create New User</button>
-
-      </form>
+            </div>
+          </div>
+        </div>
+      <div class="col-xs-3"></div>
+    </div>
 
   </div>
 </div>
