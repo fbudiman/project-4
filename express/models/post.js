@@ -7,7 +7,7 @@ var postsSchema = new Schema({
   category: String,
   body: String,
   imageUrl: String,
-  time: Date,
+  location: String,
   comments: [{ body: String, date: Date }]
 })
 
