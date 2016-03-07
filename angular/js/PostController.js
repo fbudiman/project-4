@@ -31,4 +31,14 @@ function PostController($http, Post) {
     });
 
   };
+
+  vm.yes = [
+    {value: '{{main.user.id}}', name: 'Yes'}
+  ]
+
+  vm.options = [
+    {value: 'adoption', name: 'Adoption'},
+    {value: 'lostPet', name: 'Lost/Found Pet'},
+    {value: 'misc', name: 'Miscellaneous'}
+  ];
 }

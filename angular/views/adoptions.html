@@ -33,41 +33,43 @@
         </div>
         <div class="modal-body">
 
+          <span style="font-size: 9pt; color: red;">* = Required</span>
+          <br>
+          <br>
+
           <form ng-submit="post.newPost()">
 
             <div class="form-group">
-              <label for="userId">New Post:</label>
-              <select class="form-control" name="userId" ng-model="post.postData.userId">
+              <label for="userId">New Post<span style="color:red">*</span></label>
+              <select class="form-control" name="userId" ng-model="post.postData.userId" required>
                 <option value="{{main.user.id}}">Yes</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label>Title:</label>
-              <input class="form-control" type="text" ng-model="post.postData.title">
+              <label>Title<span style="color:red">*</span></label>
+              <input class="form-control" type="text" ng-model="post.postData.title" required>
             </div>
 
             <div class="form-group">
-              <label for="category">Category:</label>
-              <select class="form-control" name="category" ng-model="post.postData.category">
-                <option value="adoption">Adoption</option>
-                <option value="lostPet">Lost Pet</option>
-                <option value="misc">Miscellaneous</option>
+              <label for="category">Category<span style="color:red">*</span></label>
+              <select class="form-control" name="category" ng-model="post.postData.category" ng-options="c.value as c.name for c in post.options" required>
+                <option value="">--- Select Category Below ---</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label>Body:</label>
-              <textarea class="form-control" type="text" ng-model="post.postData.body"></textarea>
+              <label>Body<span style="color:red">*</span></label>
+              <textarea class="form-control" type="text" ng-model="post.postData.body" required></textarea>
             </div>
 
             <div class="form-group">
-              <label>Location:</label>
+              <label>Location</label>
               <input class="form-control" type="text" ng-model="post.postData.location">
             </div>
 
             <div class="form-group">
-              <label>Image URL:</label>
+              <label>Image URL</label>
               <input class="form-control" type="text" ng-model="post.postData.imageUrl">
             </div>
 
