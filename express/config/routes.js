@@ -46,11 +46,13 @@ router.use(function(req, res, next) {
     }
 });
 
+
+//ALL ROUTES BELOW ARE AUTHENTICATED
+
 router.get('/me', function(req, res) {
   res.send(req.decoded);
 });
 
-//ALL ROUTES BELOW ARE AUTHENTICATED
 //USERS ROUTES
 router.route('/api/users').get(usersController.showUsers);
 router.route('/user/:id/delete').delete(usersController.deleteUser);

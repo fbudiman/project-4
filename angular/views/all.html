@@ -6,7 +6,7 @@
 
   <div id="bottom-bar-wrap">
     <a ui-sref-active="active" ui-sref="newsfeed"><div class="bottom-bar"></div></a><span class="link-name">Newsfeed</span>
-    <a ui-sref-active="active" ui-sref="search"><div class="bottom-bar"></div></a><span class="link-name">Search</span>
+    <a ui-sref-active="active" ui-sref="search" ng-if="main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="main.loggedIn">Search</span>
     <a ui-sref-active="active" ui-sref="about"><div class="bottom-bar"></div></a><span class="link-name">About</span>
     <a ui-sref-active="active" ui-sref="user" ng-if="main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="main.loggedIn">User</span>
     <a ui-sref-active="active" ui-sref="login" ng-if="!main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="!main.loggedIn">Login</span>
