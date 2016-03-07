@@ -11,7 +11,7 @@
     <a ui-sref-active="active" ui-sref="user" ng-if="main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="main.loggedIn">User</span>
     <a ui-sref-active="active" ui-sref="login" ng-if="!main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="!main.loggedIn">Login</span>
     <a href="#" ng-if="main.loggedIn"><div class="bottom-bar" ng-click="main.doLogout()"></div></a><span class="link-name" ng-if="main.loggedIn">Logout</span>
-    <a ui-sref-active="active" ui-sref="register"><div class="bottom-bar"></div></a><span class="link-name">Register</span>
+    <a ui-sref-active="active" ui-sref="register" ng-if="!main.loggedIn"><div class="bottom-bar"></div></a><span class="link-name" ng-if="!main.loggedIn">Register</span>
   </div>
 
     <br>
