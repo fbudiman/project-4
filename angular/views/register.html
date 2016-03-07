@@ -36,23 +36,23 @@
             <form ng-submit="user.newUser()">
               <div class="form-group">
                 <label>First Name<span style="color:red">*</span></label>
-                <input type="text" class="form-control" ng-model="user.userData.firstName">
+                <input type="text" class="form-control" ng-model="user.userData.firstName" required>
               </div>
               <div class="form-group">
                 <label>Last Name<span style="color:red">*</span></label>
-                <input type="text" class="form-control" ng-model="user.userData.lastName">
+                <input type="text" class="form-control" ng-model="user.userData.lastName" required>
               </div>
               <div class="form-group">
                 <label>Address<span style="color:red">*</span></label>
-                <input type="text" class="form-control" ng-model="user.userData.address">
+                <input type="text" class="form-control" ng-model="user.userData.address" required>
               </div>
               <div class="form-group">
                 <label>Email<span style="color:red">*</span></label>
-                <input type="email" class="form-control" ng-model="user.userData.email">
+                <input type="email" class="form-control" ng-model="user.userData.email" required>
               </div>
               <div class="form-group">
                 <label>Password<span style="color:red">*</span></label>
-                <input type="password" class="form-control" ng-model="user.userData.password">
+                <input type="password" class="form-control" ng-model="user.userData.password" required>
               </div>
               <div class="form-group">
                 <label>Profile Picture</label>
