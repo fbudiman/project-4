@@ -1,5 +1,5 @@
 var express = require('express')
-var router = new express.Router()
+var router = express.Router()
 var jwt = require('jsonwebtoken');
 var superSecret = 'ilovescotchscotchyscotchscotch';
 
@@ -7,6 +7,8 @@ var superSecret = 'ilovescotchscotchyscotchscotch';
 var usersController = require('../controllers/usersController');
 var postsController = require('../controllers/postsController');
 
+//UNAUTHENTICATED ROUTES
+router.route('/api/user/create').post(usersController.createUser);
 router.route('/authenticate').post(usersController.authenticateUser);
 
 router.use(function(req, res, next) {
@@ -39,7 +41,7 @@ router.use(function(req, res, next) {
       return res.status(403).send({
         success: false,
         message: 'No token provided.'
-      });
+      })
 
     }
 });
@@ -48,10 +50,10 @@ router.get('/me', function(req, res) {
   res.send(req.decoded);
 });
 
+//ALL ROUTES BELOW ARE AUTHENTICATED
 //USERS ROUTES
-router.route('/api/user/create').post(usersController.createUser);
-router.route('/user/:id/delete').delete(usersController.deleteUser);
 router.route('/api/users').get(usersController.showUsers);
+router.route('/user/:id/delete').delete(usersController.deleteUser);
 router.route('/user/:id/edit').put(usersController.editUser);
 router.route('/users/profile/edit/').put(usersController.editUser);
 

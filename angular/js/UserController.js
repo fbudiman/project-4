@@ -4,9 +4,9 @@ angular.module('Petsy')
 function UserController($http, User) {
 
   var vm = this
-  User.all().success(function (data){
-    vm.allUsers = data;
-  })
+  // User.all().success(function (data){
+  //   vm.allUsers = data;
+  // })
 
   // function to create a user
   vm.newUser = function() {
@@ -21,10 +21,6 @@ function UserController($http, User) {
     vm.userData = {};
     //message
     vm.message = "User successfully created."
-    //post to the page as soon as created
-    User.all().success(function (data){
-      vm.allUsers = data;
-    })
     });
 
   };
