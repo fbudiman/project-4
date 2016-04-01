@@ -21,7 +21,12 @@ app.use(function(req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost/petsy')
+//connect to local mongodb
+// mongoose.connect('mongodb://localhost/petsy')
+
+//connect to heroku mongolab
+mongoose.connect('mongodb://heroku_6nwhq69r:949jfib4nd5u4iruehe3pmnlj6@ds011800.mlab.com:11800/heroku_6nwhq69r')
+
 // var path = require('path');
 
 app.use(logger('dev'))
