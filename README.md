@@ -6,3 +6,7 @@
 
 <h3>Technology:</h3>
 <p>Petsy was built using MEAN stack - MongoDB, Express, AngularJS, NodeJS. Petsy also incorporated Bootstrap and CSS for styling and functional purposes.</p>
+
+<h3>Wireframes:</h3>
+<img src="wireframe1.JPG">
+<img src="wireframe2.JPG">
